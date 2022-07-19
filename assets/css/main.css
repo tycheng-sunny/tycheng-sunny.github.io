@@ -2592,7 +2592,7 @@ input, select, textarea {
 		-ms-justify-content: space-between;
 		justify-content: space-between;
 		background-color: #1f1815;
-		background-attachment: fixed, fixed;
+		background-attachment: scroll, fixed;
 		background-image: url("images/overlay.png"), url("../../images/jwst-carina-nebula.jpg");
 		background-position: top left, top left;
 		background-repeat: repeat, no-repeat;
@@ -2645,7 +2645,7 @@ input, select, textarea {
 
 /* Footer */
 	#footer {
-		background-attachment: fixed,fixed;
+		background-attachment: scroll,fixed;
 		background-color: #1f1815;
 		background-image: url("images/overlay.png"), url("../../images/spiral.jpg");
 		background-position: top left, top left;
