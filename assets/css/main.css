@@ -3076,18 +3076,18 @@ input, select, textarea {
 		/* Footer */
 
 			#footer {
-				background-attachment: scroll;
+				background-attachment: fixed;
 				background-color: #1f1815;
 				background-image: url("images/overlay.png"), url("../../images/spiral.jpeg");
-				background-position: bottom left,						bottom left;
-				background-repeat: repeat,							no-repeat;
-				background-size: auto,							cover;
+				background-position: bottom left,bottom left;
+				background-repeat: repeat,no-repeat;
+				background-size: auto,150%;
 				bottom: auto;
 				left: auto;
 				padding: 4em 4em 6em 4em;
 				position: relative;
-				text-align: center;
-				width: 100%;
+				text-align: right;
+				width: 35%;
 			}
 
 				#footer .icons {
