@@ -2592,11 +2592,11 @@ input, select, textarea {
 		-ms-justify-content: space-between;
 		justify-content: space-between;
 		background-color: #1f1815;
-		background-attachment: scroll,								scroll;
+		background-attachment: scroll, fixed;
 		background-image: url("images/overlay.png"), url("../../images/jwst-carina-nebula.jpg");
-		background-position: top left,							top left;
-		background-repeat: repeat,								no-repeat;
-		background-size: auto,								150%;
+		background-position: top left, top left;
+		background-repeat: repeat, no-repeat;
+		background-size: auto, 10%;
 		color: rgba(255, 255, 255, 0.5);
 		height: 100%;
 		left: 0;
@@ -2644,7 +2644,22 @@ input, select, textarea {
 		}
 
 /* Footer */
-
+	#footer {
+		background-attachment: scroll,fixed;
+		background-color: #1f1815;
+		background-image: url("images/overlay.png"), url("../../images/spiral.jpg");
+		background-position: bottom left, bottom left;
+		background-repeat: repeat, no-repeat;
+		background-size: auto,100%;
+		color: rgba(255, 255, 255, 0.5);
+		height: 100%;
+		left: 0;
+		padding: 8em 4em;
+		position: fixed;
+		text-align: right;
+		top: 0;
+		width: 35%;
+	}
 	#footer .icons {
 		margin: 1em 0 0 0;
 	}
@@ -3076,18 +3091,18 @@ input, select, textarea {
 		/* Footer */
 
 			#footer {
-				background-attachment: fixed;
+				background-attachment: scroll;
 				background-color: #1f1815;
-				background-image: url("images/overlay.png"), url("../../images/spiral.jpeg");
-				background-position: bottom left,bottom left;
-				background-repeat: repeat,no-repeat;
-				background-size: auto,150%;
+				background-image: url("images/overlay.png"), url("../../images/jwst-carina-nebula.jpg");
+				background-position: top left, bottom center;
+				background-repeat: repeat, no-repeat;
+				background-size: auto, cover;
 				bottom: auto;
 				left: auto;
 				padding: 4em 4em 6em 4em;
 				position: relative;
-				text-align: right;
-				width: 35%;
+				text-align: center;
+				width: 100%;
 			}
 
 				#footer .icons {
