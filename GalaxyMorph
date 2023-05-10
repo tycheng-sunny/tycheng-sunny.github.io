@@ -1,0 +1,110 @@
+<!DOCTYPE HTML>
+<!--
+	Strata by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Strata by HTML5 UP</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="is-preload">
+
+		<!-- Header -->
+			<header id="header">
+				<div class="inner">
+					<a href="#" class="image avatar"><img src="images/profile.png" alt="" /></a>
+					<h1><strong>Dr Ting-Yun Cheng<br>(aka Sunny)</strong></h1><br>
+					<p><strong>Taiwanese Astrophysicist<br>Centre for Extragalactic Astronomy<br>Durham University, UK</strong></p>
+				</div>
+			</header>
+
+		<!-- Main -->
+		       <div id="main">
+					<section id="one">
+						<header class="major">
+							<h2><i>- Machine Learning to Galaxy Morphology -</i></h2>
+              <!--
+							<h3><b>2023</b></h3>
+							<ul>
+								<li>Talk/Sep -- &nbsp;&nbsp;<i style="color:SteelBlue;">Invited Speaker</i>. <b>Taiwan Space Union</b>, Virtual</li>
+								<li>Conference/Jul -- &nbsp;&nbsp;<i style="color:DarkGoldenrod;">Session Co-organisers</i>. <b>National Astronomy Meeting, RAS</b>, United Kingdom</li>
+								<li>Talk/June -- &nbsp;&nbsp;<i style="color:SteelBlue;">Invited Speaker</i>. <b>National Central University</b>, Taiwan</li>
+								<li>Conference/May -- &nbsp;&nbsp;<i style="color:YellowGreen;">Poster</i>. <b>Annual meeting of the Astronomical Society, ASROC</b>, Taiwan</li>
+								<li>Conference/Mar -- &nbsp;&nbsp;<i style="color:YellowGreen;">Attendee</i>. <b>The Circum-Galactic Medium across cosmic time : an observational and modeling challenge, The 52nd Saas-Fee Advanced Course</b>, Switzerland</li>
+								<li>Conference/Mar -- &nbsp;&nbsp;<i style="color:DarkGoldenrod;">Lead-organiser</i>. <b>Harvesting spectroscopic and time series data with machine learning and artificial intelligence, RAS</b>, United Kingdom</li>
+								<li>Talk/Mar -- &nbsp;&nbsp;<i style="color:SteelBlue;">Invited Speaker</i>. <b>University of Bath</b>, United Kingdom</li>
+								<li>Talk/Feb -- &nbsp;&nbsp;<i style="color:SteelBlue;">Invited Speaker</i>. <b>University of Nottingham</b>, United Kingdom</li>
+								<li>Conference/Jan -- &nbsp;&nbsp;<i style="color:DarkGoldenrod;">Session Lead-Organiser</i>. <b>Dark Energy Survey Collaboration Meeting, University of Portsmouth.</b>, United Kingdom</li>
+							</ul>
+							<h3><b>2022</b></h3>
+							<ul>
+								<li>Talk/Nov -- &nbsp;&nbsp;<i style="color:YellowGreen;">Seminar Speaker</i>. <b>University of Manchester</b>, United Kingdom</li>
+								<li>Conference/Sep -- &nbsp;&nbsp;<i style="color:YellowGreen;">Contributed</i>. <b>What matter(s) around galaxies 2022 - Connecting the dots between the CGM and the larger-scale environment, University of Milano-Bicocca</b>, Italy</li>
+								<li>Conference/Jul -- &nbsp;&nbsp;<i style="color:DarkGoldenrod;">Session Co-organisers</i>. <b>National Astronomy Meeting, RAS</b>, United Kingdom</li>
+								<li>Conference/Jun -- &nbsp;&nbsp;<i style="color:YellowGreen;">Contributed</i>. <b>European Astronomical Society Annual Meeting, EAS</b>, Spain</li>
+								<li>Talk/May -- &nbsp;&nbsp;<i style="color:SteelBlue;">Invited Speaker</i>. <b>National Chen Kong University</b>, Taiwan</li>
+								<li>Conference/Mar -- &nbsp;&nbsp;<i style="color:SteelBlue;">Awardee Presentation</i>. <b>AI UK: UK’s national showcase of artificial intelligence (AI) and data science research and collaboration, The Alan Turing Institute</b>, Virtual</li>
+							</ul>
+							<h3><b>2021</b></h3>
+							<ul>
+								<li>Talk/Dec -- &nbsp;&nbsp;<i style="color:SteelBlue;">Invited Speaker</i>. <b>Australia National University</b>, Virtual</li>
+								<li>Conference/Oct -- &nbsp;&nbsp;<i style="color:YellowGreen;">Contributed</i>. <b>Debating The Potential of Machine Learning In Astronomical Surveys, Institut Astrophysique de Paris</b>, Virtual</li>
+								<li>Conference/Oct -- &nbsp;&nbsp;<i style="color:SteelBlue;">Invited Speaker</i>. <b>Artificial Intelligence for Science, Industry and Society, National Autonomous University of Mexico</b>, Virtual</li>
+								<li>Conference/Jun -- &nbsp;&nbsp;<i style="color:SteelBlue;">Invited Speaker</i>. <b>238th Meeting of the American Astronomical Society, AAS</b>, Virtual</li>
+								<li>Talk/Feb -- &nbsp;&nbsp;<i style="color:SteelBlue;">Invited Speaker</i>. <b>National Tsing Hua University</b>, Taiwan</li>
+								<li>Talk/Jan -- &nbsp;&nbsp;<i style="color:YellowGreen;">Seminar Speaker</i>. <b>Academia Sinica Institute of Astronomy and Astrophysics</b>, Taiwan</li>
+							</ul>
+							<h3><b>2020</b></h3>
+							<ul>
+								<li>Talk/Oct -- &nbsp;&nbsp;<i style="color:SteelBlue;">Invited Speaker</i>. <b>Machine Learning Club, University of California Santa Cruz</b>, Virtual</li>
+								<li>Conference/Jul -- &nbsp;&nbsp;<i style="color:YellowGreen;">Contributed</i>. <b>Kavil Summer Program Astrophysics Alumni Meeting</b>, University of California Santa Cruz, Virtual</li>
+							</ul>
+							<h3><b>2019</b></h3>
+							<ul>
+								<li>Conference/Nov -- &nbsp;&nbsp;<i style="color:YellowGreen;">Contributed</i>. <b>Dark Energy Survey Collaboration Meeting, University of Sussex</b>, United Kingdom</li>
+								<li>Talk/Oct -- &nbsp;&nbsp;<i style="color:YellowGreen;">Seminar Speaker</i>. <b>University College London</b>, United Kingdom</li>
+								<li>Conference/Mar -- &nbsp;&nbsp;<i style="color:YellowGreen;">Contributed</i>. <b>Machine Learning and AI applied to Astronomy, RAS</b>, United Kingdom</li>
+							</ul>
+							<h3><b>2018</b></h3>
+							<ul>
+								<li>Conference/Nov -- &nbsp;&nbsp;<i style="color:YellowGreen;">Contributed</i>. <b>Dark Energy Survey: More than dark energy, RAS</b>, United Kingdom</li>
+								<li>Conference/Sep -- &nbsp;&nbsp;<i style="color:YellowGreen;">Contributed</i>. <b>Machine Learning Applications for Astronomy, University of Nottiingham</b>, United Kingdom</li>
+								<li>Conference/June -- &nbsp;&nbsp;<i style="color:YellowGreen;">Contributed</i>. <b>Planning for Surprises in the era of Data-Driven Astronomy, University of Oxford</b>, United Kingdom</li>
+							</ul>
+              -->
+							<ul class="actions">
+								<li><a href="research.html" class="button">Research</a></li>
+							</ul>
+					</section>
+
+		<!-- Footer -->
+			<footer id="footer">
+				<div class="inner">
+					<ul class="icons">
+						<li><strong><a href="https://twitter.com/AstroSunnyC" class="icon brands fa-twitter"><span class="label">Twitter</span></a></strong></li>
+						<li><a href="https://github.com/tycheng-sunny" class="icon brands fa-github"><span class="label">Github</span></a></li>
+						<li><a href="https://www.linkedin.com/in/ting-yun-cheng-36a21b152/" class="icon brands fa-linkedin"><span class="label">Linkedin</span></a></li>
+						<li><a href="https://orcid.org/0000-0001-8670-4495" class="icon brands fa-orcid"><span class="label">ORCID</span></a></li>
+						<li><a href="https://scholar.google.com/citations?user=DngyTIgAAAAJ&hl=en" class="icon brands fa-google"><span class="label">Google Scholar</span></a></li>
+						<li><a href="mailto:ting-yun.cheng@durham.ac.uk" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+					</ul>
+					<ul class="copyright">
+						<li>&copy; HTML5:Strata</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+					</ul>
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.poptrox.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
