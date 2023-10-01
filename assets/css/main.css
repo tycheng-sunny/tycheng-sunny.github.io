@@ -25,9 +25,13 @@ section, summary, time, mark, audio, video {
 	font: inherit;
 	vertical-align: baseline;}
 
-article, aside, details, figcaption, figure,
+article, aside, details, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;}
+
+figcaption {
+    display: table-caption;
+    caption-side: bottom;}
 
 body {
 	line-height: 1;
