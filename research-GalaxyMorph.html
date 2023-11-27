@@ -34,25 +34,32 @@
 						<p align="justify">Visual classification is still one of the popular approaches to classify the morphology of galaxies, despite that two experts may find their classifications inconsistent with each other (<a href="https://ned.ipac.caltech.edu/level5/March02/Kormendy/frames.html"><font style="color:Gray;">Kormendy 1982</font></a> and <a href="https://arxiv.org/abs/astro-ph/0006166"><font style="color:Gray;">Abraham 1999</font></a>). However, visual classification is a very laborious process; even with the success of citzen science such as <a href="https://www.zooniverse.org"><font style="color:Gray;">Galaxy Zoo series projects</font></a>, it could still takes couple years to have the classification of a million of galaxies. Supervised machine learning (ML) is therefore a great tool to improve and accelerate the classification process.</p>
 
 						<h3>Optimal ML techniques for galaxy morphological classification</h3>
-							<p align="justify">In <a href="https://arxiv.org/abs/1908.03610"><font style="color:SteelBlue;">Cheng 2020a</font></a>, we investigated several common supervised ML techniques <i>[including Convolutional Neural Network (CNN), K-nearest neighbour, logistic regression, Support Vector Machine, Random Forest, and Neural Networks]</i> on binary classification of galaxy morphology (i.e. spiral and elliptical galaxy) using the imaging data from <a href="https://arxiv.org/abs/1801.03181"><font style="color:Gray;">the Dark Energy Survey (DES) Year 1 data release</font></a>. We tested not only different techniques but also different types of inputs such as (1) balanced and imbalanced number of data between the target classes and (2) with different scales such as linear, logrithmic, and gradient in pixel values. In Fig.1, we investigate the impact of having imbalanced number of data between the two target types. The dataset 1 (yellow) and 3 (cyan) have 3 times more spiral galaxies than elliptical galaxies, while the two types have the same number of data in the dataset 2 (red) and 4 (navy blue). The metric used here is called "recall" which represents the number of data that is correctly classified within their true classes. Regardless of the methodology, the imbalanced datasets present an biased result towards the majority -- machines tend to have better performance in classifying spiral galaxies than elliptical galaxies, while the balanced datasets show a fair performance between two types. </p>
+						<p align="justify">In <a href="https://arxiv.org/abs/1908.03610"><font style="color:SteelBlue;">Cheng 2020a</font></a>, we investigated several common supervised ML techniques <i>[including Convolutional Neural Network (CNN), K-nearest neighbour, logistic regression, Support Vector Machine, Random Forest, and Neural Networks]</i> on binary classification of galaxy morphology (i.e. spiral and elliptical galaxy) using the imaging data from <a href="https://arxiv.org/abs/1801.03181"><font style="color:Gray;">the Dark Energy Survey (DES) Year 1 data release</font></a>. The classifications used to train the ML techniques are from the Galazy Zoo 1 (GZ1; Lintott et al. 2011). We tested not only different techniques but also different types of inputs such as (1) balanced and imbalanced number of data between the target classes and (2) with different scales such as linear, logrithmic, and gradient in pixel values. In Fig.1, we investigate the impact of having imbalanced number of data between the two target types. The dataset 1 (yellow) and 3 (cyan) have 3 times more spiral galaxies than elliptical galaxies, while the two types have the same number of data in the dataset 2 (red) and 4 (navy blue). The metric used here is called "recall" which represents the number of data that is correctly classified within their true classes. Regardless of the methodology, the imbalanced datasets present an biased result towards the majority -- machines tend to have better performance in classifying spiral galaxies than elliptical galaxies, while the balanced datasets show a fair performance between two types. </p>
 		
-							<figure align="center">
-								<img src="images/balance_impact.png" alt="" / style="width:75%">
-								<figcaption align="justify" style="width:75%;">Fig.1: The recalls of the ellipticals and spirals for all methods and the different types of the input data used. The colours represent the different data sets, while the different shape markers are the different methods.</figcaption>
-							</figure>
+						<figure>
+							<img src="images/balance_impact.png" alt="" / style="width:75%">
+							<figcaption align="justify" style="width:75%;">Fig.1: The recalls of the ellipticals and spirals for all methods and the different types of the input data used. The colours represent the different data sets, while the different shape markers are the different methods.</figcaption>
+						</figure>
 							
-							<p></p>
+						<p></p>
 							
-							<p align="justify">The comparison of the accuracy between different methods and different types of input data is shown in Fig.2. The accuracy is defined as the number of galaxies that are correctly classified within all galaxies. Fig.2 shows that the optimal methodology for this task is to apply <i><b>CNNs</b></i> on <i><b>balanced datasets</b></i> with <i><b>the combination of linear and gradient images.</b></i> This gives an initial accuracy of ~0.95 to classify galaxies into spiral and elliptical galaxies.</p>	
-							<figure>
-								<img src="images/accuracy2methods.png" alt="" / style="width:80%">
-								<figcaption align="justify" style="width:80%;">Fig.2: The accuracy versus each method with the different data sets and the different types of input data. Colours represent different datasets having different fractions of the target types. The different styles of shading are the different types of input data such that the fully-filled, the diagonal-line-filled, the dotted-filled represents the raw images, the gradient images, and the combination input of the previous two, respectively. The labels above bars are the highest value of the accuracy for each method). </figcaption>
-							</figure>
+						<p align="justify">The comparison of the accuracy between different methods and different types of input data is shown in Fig.2. The accuracy is defined as the number of galaxies that are correctly classified within all galaxies. Fig.2 shows that the optimal methodology for this task is to apply <i><b>CNNs</b></i> on <i><b>balanced datasets</b></i> with <i><b>the combination of linear and gradient images.</b></i> This gives an initial accuracy of ~0.95 to classify galaxies into spiral and elliptical galaxies.</p>	
+						<div class="container">
+						<figure align="center">
+							<img src="images/accuracy2methods.png" alt="" / style="width:80%">
+							<figcaption align="justify">Fig.2: The accuracy versus each method with the different data sets and the different types of input data. Colours represent different datasets having different fractions of the target types. The different styles of shading are the different types of input data such that the fully-filled, the diagonal-line-filled, the dotted-filled represents the raw images, the gradient images, and the combination input of the previous two, respectively. The labels above bars are the highest value of the accuracy for each method). </figcaption>
+						</figure>
+						</div>
 							
 		
 						<p></p>
 						<h3>Further refining the CNN models</h3>
-						<p align="justify"></p>
+						<p align="justify">After deciding an optimal method -- CNN -- for this task, we further investigate any potential improvement to the CNN models. One of the interesting discoveries is that due to the better resolution and deeper depth of DES images compared to the images used in the GZ1 classification (i.e. Sloan Digital Sky Survey; SDSS), we found ~2.5% GZ1 labels used in this work require an update. For example, in Fig.3, the left (DES) image shows a clear spiral structure while the right (SDSS) does not. The observation limitation restricted what volunteers in GZ1 could see which results in an incorrect "true" label for some galaxies. After correcting the labels of these galaxies (and other acts), the accuracy of the CNN models improves to over 0.99.</p>
+						<figure>
+							<img src="incorrect_labels.png" alt="" / style="width:80%">
+							<figcaption align="justify" style="width:80%;">Fig.3: <i>Left:</i> DES image, which CNN "sees". <i>Right:</i> SDSS images, which volunteers accounted for the visual classification in GZ1 see.</figcaption>
+						</figure>
+						
 						
 						<h3>Largest galaxy morphological classification catalogue to date</h3>
 							<p align="justify">With the thorough investigation of the CNNs on binary classification of galaxy morphology, in <a href="https://arxiv.org/abs/2107.10210"><font style="color:SteelBlue;">Cheng 2021b</font></a>, we constructed one of the largest galaxy morphogical classification catalogues containing over 20 millions galaxies imaged by DES.</p>
@@ -64,6 +71,7 @@
 							<li>Cheng et al. 2020a, MNRAS, 439, 4209</li>
 							<li>Cheng et al. 2021b, MNRAS, 507, 4425</li>
 							<li>Kormendy, 1982, Saas-Fee Advanced Course at SSAA</li>
+							<li>Lintott et al. 2011, MNRAS, 410, 166</li>
 						</ul>
 						
 					</section>
