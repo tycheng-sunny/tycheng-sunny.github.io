@@ -36,9 +36,9 @@
 						<h3>Optimal ML techniques for galaxy morphological classification</h3>
 							<p align="justify">In <a href="https://arxiv.org/abs/1908.03610"><font style="color:SteelBlue;">Cheng 2020a</font></a>, we investigated several common supervised ML techniques <i>[including Convolutional Neural Network (CNN), K-nearest neighbour, logistic regression, Support Vector Machine, Random Forest, and Neural Networks]</i> on binary classification of galaxy morphology (i.e. spiral and elliptical galaxy) using the imaging data from <a href="https://arxiv.org/abs/1801.03181"><font style="color:Gray;">the Dark Energy Survey (DES) Year 1 data release</font></a>. We tested not only different techniques but also different types of inputs such as (1) balanced and imbalanced number of data between the target classes and (2) with different scales such as linear, logrithmic, and gradient in pixel values. In Fig.1, we investigate the impact of having imbalanced number of data between the two target types. The dataset 1 (yellow) and 3 (cyan) have 3 times more spiral galaxies than elliptical galaxies, while the two types have the same number of data in the dataset 2 (red) and 4 (navy blue). The metric used here is called "recall" which represents the number of data that is correctly classified within their true classes. Regardless of the methodology, the imbalanced datasets present an biased result towards the majority -- machines tend to have better performance in classifying spiral galaxies than elliptical galaxies, while the balanced datasets show a fair performance between two types. </p>
 		
-							<figure>
+							<figure align="center">
 								<img src="images/balance_impact.png" alt="" / style="width:75%">
-								<figcaption align="justify" style="width:75%;">Fig.1: The recalls of the ellipticals and spirals for all methods and the different types of the input data used. The colours represent the different data sets, while the different shape markers are the different methods.</figcaption>
+								<figcaption align="justify" style="width:75%;" style="display:inline-block;">Fig.1: The recalls of the ellipticals and spirals for all methods and the different types of the input data used. The colours represent the different data sets, while the different shape markers are the different methods.</figcaption>
 							</figure>
 							
 							<p></p>
