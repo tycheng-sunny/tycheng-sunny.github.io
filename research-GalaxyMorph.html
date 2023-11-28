@@ -56,17 +56,25 @@
 		
 						<p></p>
 						<h3>Further refining the CNN models</h3>
-						<p align="justify">After deciding an optimal method -- CNN -- for this task, we further investigate any potential improvement to the CNN models. One of the interesting discoveries is that due to the better resolution and deeper depth of DES images compared to the images used in the GZ1 classification (i.e. Sloan Digital Sky Survey; SDSS), we found ~2.5% GZ1 labels used in this work require an update. For example, in Fig.3, the left (DES) image shows a clear spiral structure while the right (SDSS) does not. The observation limitation restricted what volunteers in GZ1 could see which results in an incorrect "true" label for some galaxies. After correcting the labels of these galaxies (and other acts), the accuracy of the CNN models improves to over 0.99.</p>
+						<p align="justify">After deciding an optimal method -- CNN -- for this task, we further investigate any potential improvement to the CNN models. One of the interesting discoveries is that due to the better resolution and deeper depth of DES images compared to the images used in the GZ1 classification (i.e. Sloan Digital Sky Survey; SDSS), we found ~2.5% GZ1 labels used in this work require an update. For example, in Fig.3, the left (DES) image shows a clear spiral structure while the right (SDSS) does not. The observation limitation restricted what volunteers in GZ1 could see which results in an incorrect "true" label for some galaxies. After correcting the labels of these galaxies (and other acts), the accuracy of the CNN models improves to <b>over 0.99</b>.</p>
 						<div class="container">
 						<figure align="center">
 							<img src="images/incorrect_labels.png" alt="" / style="width:80%">
 							<figcaption align="justify">Fig.3: <i>Left:</i> DES image, which CNN "sees". <i>Right:</i> SDSS images, which volunteers accounted for the visual classification in GZ1 see.</figcaption>
 						</figure>
 						</div>
+						<p></p>
 						
 						<h3>Largest galaxy morphological classification catalogue to date</h3>
-						<p align="justify">With the thorough investigation of the CNNs on binary classification of galaxy morphology, in <a href="https://arxiv.org/abs/2107.10210"><font style="color:SteelBlue;">Cheng 2021b</font></a>, we constructed one of the largest galaxy morphogical classification catalogues containing over 20 millions galaxies imaged by DES.</p>
-							
+						<p align="justify">With the thorough investigation of the CNNs on binary classification of galaxy morphology, in <a href="https://arxiv.org/abs/2107.10210"><font style="color:SteelBlue;">Cheng 2021b</font></a>, we constructed one of the largest galaxy morphogical classification catalogues containing over 20 millions galaxies imaged by DES. Galaxies in this catalogue covers the redshift up to z=1 and the <i>i</i>-band magnitudes are between 16 and 21. The catalogue is examined by comparing with the structural measurements and physical properties of galaxies as well as visual inspection to a subset of samples in different magnitude bins. Particularly, in visual inspection (see Fig.4), we found that while human tend to misclassify disk galaxies into elliptical galaxies at fainter magnitude, the CNN classifier can correctly classify them. With these examinations, this work provides <b>confidence level</b> for how much an user can trust the CNN classifications. The catalogue is publicly accessible via the <a href="https://des.ncsa.illinois.edu/releases/y3a2/gal-morphology">DES Data Management web</a>. </p>
+
+						<div class="container">
+						<figure align="center">
+							<img src="images/data_VI.png" alt="" / style="width:80%">
+							<figcaption align="justify">Fig.4 The diagram shows the colour and the Sersic index distribution of our samples. The histograms at the bottom and the left show the samples with mismatched labels between the CNN and visual classifications for the Sersic index and the colour, respectively. The dashed lines show the misclassified samples with the labels from the visual classifications.</figcaption>
+						</figure>
+						</div>
+						<p></p>
 						
 						<h4>Reference</h4>
 						<ul>
