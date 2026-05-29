@@ -361,9 +361,9 @@
                     <h3 style="color: #000000; font-size: 1.4rem;">Taiwan</h3>
                   </div>
 
-                  <div class="wow bounceInUp timeline-box" data-wow-delay="0s">
+                  <div class="wow bounceInUp timeline-box clickable" data-wow-delay="0s" onclick="showGrants('grants-phd')" style="cursor:pointer;">
                     <div class="timeline-container">
-                      <h3 class="experience-designation m-0">PhD</h3>
+                      <h3 class="experience-designation m-0">PhD in Physics</h3>
                       <h4 class="experience-company-name">
                         University of Nottingham
                         <p>(United Kingdom)</p>
@@ -372,7 +372,7 @@
                     </div>
                   </div>
 
-                  <div class="wow bounceInUp timeline-box" data-wow-delay="0.1s">
+                  <div class="wow bounceInUp timeline-box clickable" data-wow-delay="0.1s" onclick="showGrants('grants-postdoc')" style="cursor:pointer;">
                     <div class="timeline-container">
                       <h3 class="experience-designation m-0">Postdoctoral Researcher</h3>
                       <h4 class="experience-company-name">
@@ -391,7 +391,7 @@
                     </div>
                   </div>
 
-                  <div class="wow bounceInUp timeline-box" data-wow-delay="0.2s">
+                  <div class="wow bounceInUp timeline-box clickable" data-wow-delay="0.2s" onclick="showGrants('grants-assistant_prof')" style="cursor:pointer;">
                     <div class="timeline-container">
                       <h3 class="experience-designation m-0">Assistant Professor</h3>
                       <h4 class="experience-company-name">
@@ -411,6 +411,131 @@
 
                 </div><!-- /.timeline -->
               </div><!-- /#education -->
+              
+            <!--Brief-CV / Grants next to timeline-->
+            <div class="col-lg-6 mt-5" id="grants-panel">
+              <!--PhD-->
+              <div id="grants-phd" class="grants-section" style="display:none;">
+                <h4>PhD <small>| University of Nottingham (2017-2020)</small></h4>
+                <hr>
+                <h5 style="text-align: left; color: #ff9800;">Grant & Award</h5>
+                <ul>
+                  <li><font style="font-family: Trebuchet MS; font-size: 14px; color:#6c757d;">Graduate School Travel Prize | University of Nottingham (UK)</font></li>
+                  <li><font style="font-family: Trebuchet MS; font-size: 14px; color:#6c757d;">Conference/Meeting Travel Grants | RAS (UK)</font></li>
+                  <li><font style="font-family: Trebuchet MS; font-size: 14px; color:#6c757d;">Kavli Summer Program in Astrophysics Fellow | UC Santa Cruz (US)</font></li>
+                  <li><font style="font-family: Trebuchet MS; font-size: 14px; color:#6c757d;">Vice-Chancellor's Scholarship for Research Excellence (International) | University of Nottingham (UK)</font></li>
+                </ul>
+                <h5 style="text-align: left; color: #ff9800;">Leadership</h5>
+                <ul>
+                  <li><span style="color:#6c757d;">Organiser: <font style="font-family: Trebuchet MS; font-size: 14px;">CAPT Seminar | University of Nottingham | 2019-2020</font></span></li>
+                </ul>
+                <h5 style="text-align: left; color: #ff9800;">Invited Talk</h5>
+                <ul>
+                  <li><font style="font-family: Trebuchet MS; font-size: 14px; color:#6c757d;">Seminar | Machine Learning Club, UC Santa Cruz (Oct 2020)</font></li>
+                  <li><font style="font-family: Trebuchet MS; font-size: 14px; color:#6c757d;">Seminar | Kavli 2019 Alumni Event, UC Santa Cruz (Jul 2020)</font></li>
+                  <li><font style="font-family: Trebuchet MS; font-size: 14px; color:#6c757d;">Seminar | University College London (Oct 2019)</font></li>
+                </ul>
+              </div><!--PhD-->
+
+              <!--Postdoc-->
+              <div id="grants-postdoc" class="grants-section" style="display:none;">
+                <h4>Postdoc <small>| Durham University (2020-2025)</small></h4>
+                <hr>
+                <h5 style="text-align: left; color: #ff9800;">Grant & Award</h5>
+                <ul>
+                  <li><font style="font-family: Trebuchet MS; font-size: 14px; color:#6c757d;">Dark Energy Survey Travel Grant | Fermilab (US)</font></li>
+                  <li><font style="font-family: Trebuchet MS; font-size: 14px; color:#6c757d;">Discretionary Award | Durham University (UK)</font></li>
+                  <li><font style="font-family: Trebuchet MS; font-size: 14px; color:#6c757d;">Specialist Discussion Meeting Organising Grant | RAS (UK)</font></li>
+                  <li><font style="font-family: Trebuchet MS; font-size: 14px; color:#6c757d;">Physics Department Award for Excellence | Durham University (UK)</font></li>
+                  <li><font style="font-family: Trebuchet MS; font-size: 14px; color:#6c757d;">The Post-Doctoral Enrichment Awards | The Alan Turing Institute (UK)</font></li>
+                </ul>
+                <h5 style="text-align: left; color: #ff9800;">Leadership</h5>
+                <h6 style="text-align: left;">Organisational Leadership</h6>
+                <ul>
+                  <li><span style="color:#6c757d;">Coordinator: <font style="font-family: Trebuchet MS; font-size: 14px;">Galaxy Evolution Working Group | Dark Energy Survey</font></span></li>
+                  <li><span style="color:#6c757d;">Committee: <font style="font-family: Trebuchet MS; font-size: 14px;">Education and Public Outreach | Dark Energy Spectroscopic Instrument | 2023-2024</font></span></li>
+                  <li><span style="color:#6c757d;">ECR Editorial Board: <font style="font-family: Trebuchet MS; font-size: 14px;">ASCOM Journal | Elsevier | 2022-2024</font></span></li>
+                  <li><span style="color:#6c757d;">Committee: <font style="font-family: Trebuchet MS; font-size: 14px;">Taiwanese Young Researcher Association (TYRA) | 2022-2023</font></span></li>
+                </ul>
+                <h5 style="text-align: left;">Conference / Workshop / Project</h5>
+                <ul>
+                  <li><span style="color:#6c757d;">Guest Editor: <font style="font-family: Trebuchet MS; font-size: 14px;">Special Edition "<i><a href="https://www.sciencedirect.com/science/article/abs/pii/S2213133724000453?via%3Dihub" style="color:#6c757d;"><u>Machine Learning Techniques in Modern Astronomy</u></a></i>", ASCOM Journal (Elsevier), April 2024</font></span></li>
+                  <li><span style="color:#6c757d;">Lead: <font style="font-family: Trebuchet MS; font-size: 14px;">GalEvo Discussion | DES Collaboration Meetings (2022-2025)</font></span></li>
+                  <li><span style="color:#6c757d;">Lead: <font style="font-family: Trebuchet MS; font-size: 14px;">Machine Learning for DES | Dark Energy Survey (2022-2024)</font></span></li>
+                  <li><span style="color:#6c757d;">Lead: <font style="font-family: Trebuchet MS; font-size: 14px;">Next Step of Career after PhD | Durham University (2022-2024)</font></span></li>
+                  <li><span style="color:#6c757d;">Lead: <font style="font-family: Trebuchet MS; font-size: 14px;">Specialist Discussion Meeting "<i><a href="https://www.youtube.com/watch?v=3zCSTPK38XQ" style="color:#6c757d;"><u>Harvesting spectroscopic and time series data with ML/AI</u></a></i>" (<i><a href="https://academic.oup.com/astrogeo/article/65/2/2.35/7635842" style="color:#6c757d;"><u>summary article</u></a></i> published on A&G, April 2024) | RAS (Mar 2023)</font></span></li>
+                  <li><span style="color:#6c757d;"><font style="font-family: Trebuchet MS; font-size: 14px;">National Astronomy Meeting Session "<i>Illuminating the Faintest Galaxies: Dwarf Galaxies as Probes of Dark Matter, Feedback, and the First Stars</i>" | RAS (Jul 2025)</font></span></li>
+                  <li><span style="color:#6c757d;"><font style="font-family: Trebuchet MS; font-size: 14px;">National Astronomy Meeting Session "<i>Deep & Shallow learning in the era of large galaxy surveys and simulations</i>" | RAS (Jul 2023)</font></span></li>
+                  <li><span style="color:#6c757d;"><font style="font-family: Trebuchet MS; font-size: 14px;">National Astronomy Meeting Session "<i>Machine Learning in Modern Astronomy & The Future of Machine Learning in Astronomy</i>" | RAS (Jul 2022)</font></span></li>
+                  <li><span style="color:#6c757d;"><font style="font-family: Trebuchet MS; font-size: 14px;">EDI sessions | Durham University (2022-2024)</font></span></li>
+                </ul>
+                <h5 style="text-align: left; color: #ff9800;">Invited Talk</h5>
+                <h6 style="text-align: left;">Conference Talk / Lecture</h6>
+                <ul>
+                  <li><span style="color:#6c757d;">Lecture: </span><font style="font-family: Trebuchet MS; font-size: 14px; color:#6c757d;">Deciphering the Cosmic Code for Galaxy Formation | Pontifical Catholic University of Chile (Dec 2024)</font></li>
+                  <li><span style="color:#6c757d;">Series Talk: </span><font style="font-family: Trebuchet MS; font-size: 14px; color:#6c757d;">Machine Learning in Astronomy and Space Science | Taiwan Space Union (Sep 2023)</font></li>
+                  <li><font style="font-family: Trebuchet MS; font-size: 14px; color:#6c757d;">AI UK: Awardee Presentation | The Alan Turing Institute (Mar 2022)</font></li>
+                  <li><font style="font-family: Trebuchet MS; font-size: 14px; color:#6c757d;">Artificial Intelligence for Science, Industry and Society | National Autonomous University of Mexico (Oct 2021)</font></li>
+                  <li><font style="font-family: Trebuchet MS; font-size: 14px; color:#6c757d;">The 238th Meeting of the American Astronomical Society | AAS (Jun 2021)</font></li>
+                </ul>
+                <h6 style="text-align: left;">Colloquia / Seminars</h6>
+                <ul>
+                  <li><font style="font-family: Trebuchet MS; font-size: 14px; color:#6c757d;">Colloquium | University of Edinburgh (Mar 2025)</font></li>
+                  <li><font style="font-family: Trebuchet MS; font-size: 14px; color:#6c757d;">Colloquium | University of Nottingham (Mar 2025)</font></li>
+                  <li><font style="font-family: Trebuchet MS; font-size: 14px; color:#6c757d;">Seminar | Institute of Space Sciences (ICE-CSIC) (Feb 2025)</font></li>
+                  <li><font style="font-family: Trebuchet MS; font-size: 14px; color:#6c757d;">Seminar | University of Edinburgh (Jul 2024)</font></li>
+                  <li><font style="font-family: Trebuchet MS; font-size: 14px; color:#6c757d;">Colloquium | University College London (Dec 2023)</font></li>
+                  <li><font style="font-family: Trebuchet MS; font-size: 14px; color:#6c757d;">Seminar | ASIAA, Taiwan (Jun 2023)</font></li>
+                  <li><font style="font-family: Trebuchet MS; font-size: 14px; color:#6c757d;">Colloquium | National Central University (Jun 2023)</font></li>
+                  <li><font style="font-family: Trebuchet MS; font-size: 14px; color:#6c757d;">Colloquium | University of Bath (Mar 2023)</font></li>
+                  <li><font style="font-family: Trebuchet MS; font-size: 14px; color:#6c757d;">Seminar | University of Nottingham (Feb 2023)</font></li>
+                  <li><font style="font-family: Trebuchet MS; font-size: 14px; color:#6c757d;">Seminar | University of Manchester (Oct 2022)</font></li>
+                  <li><font style="font-family: Trebuchet MS; font-size: 14px; color:#6c757d;">Seminar | National Cheng Kung University (May 2022)</font></li>
+                  <li><font style="font-family: Trebuchet MS; font-size: 14px; color:#6c757d;">Seminar | Australia National University (Dec 2021)</font></li>
+                  <li><font style="font-family: Trebuchet MS; font-size: 14px; color:#6c757d;">Colloquium | National Tsing Hua University (Feb 2021)</font></li>
+                  <li><font style="font-family: Trebuchet MS; font-size: 14px; color:#6c757d;">Colloquium | ASIAA, Taiwan (Jan 2021)</font></li>
+                </ul>
+              </div><!--Postdoc-->
+
+              <div id="grants-editorial" class="grants-section" style="display:none;">
+                <h4>Grants &amp; Awards — Editorial Board</h4>
+              </div>
+
+              <!--Assistant Professor-->
+              <div id="grants-assistant_prof" class="grants-section" style="display:none;">
+                <h4>Assistant Professor <small>| Kapteyn Institute</small></h4>
+                <hr>
+                <h5 style="text-align: left; color: #ff9800;">Leadership</h5>
+                <h6 style="text-align: left;">Organisational Leadership</h6>
+                <ul>
+                  <li><span style="color:#6c757d;">Editor: <font style="font-family: Trebuchet MS; font-size: 14px;"><a href="https://www.sciencedirect.com/journal/astronomy-and-computing" style="color:#6c757d;""><u>ASCOM Journal</u></a> | Elsevier </font></span></li>
+                  <li><span style="color:#6c757d;">Coordinator: <font style="font-family: Trebuchet MS; font-size: 14px;">Galaxy Evolution Working Group | Dark Energy Survey</font></span></li>
+                  <li><span style="color:#6c757d;">Committee: <font style="font-family: Trebuchet MS; font-size: 14px;"><a href="https://naeic.nl/" style="color:#6c757d;"><u>The Netherlands Astronomy Equity and Inclusion Committee</u></a></font></span></li>
+                  <li><span style="color:#6c757d;">Committee: <font style="font-family: Trebuchet MS; font-size: 14px;">Well-being Committee</font></span></li>
+                  <li><span style="color:#6c757d;">Committee: <font style="font-family: Trebuchet MS; font-size: 14px;">Kapteyn Monday Seminar</font></span></li>
+                </ul>
+                <h6 style="text-align: left;">Conference / Workshop / Project</h6>
+                <ul>
+                  <li><span style="color:#6c757d;">Lead: <font style="font-family: Trebuchet MS; font-size: 14px;">Machine learning workshop | Kapteyn Institute (Apr 2026)</font></span></li>
+                  <li><span style="color:#6c757d;"><font style="font-family: Trebuchet MS; font-size: 14px;">National Work Climate Survey (NAIEC; 2026/2027)</font></span></li>
+                  <li><span style="color:#6c757d;"><font style="font-family: Trebuchet MS; font-size: 14px;">NAC equity and inclusion splinter session  (May 2026)</font></span></li>
+                </ul>
+                <h5 style="text-align: left; color: #ff9800;">Invited Talk</h5>
+                <h6 style="text-align: left;">Conference Talk / Lecture</h6>
+                <ul>
+                  <!--<li><font style="font-family: Trebuchet MS; font-size: 14px; color:#6c757d;">Machine Learning in Astrophysics Workshop | NCBJ (Sep 2026)</font></li>-->
+                  <li><span style="color:#6c757d;">Series Talk: </span><font style="font-family: Trebuchet MS; font-size: 14px; color:#6c757d;"><a href="https://www.cwi.nl/en/research/computational-imaging/events/astronomical-surveys-machine-learning-ting-yun-cheng/" style="color:#6c757d;"><u>AI x Astro Seminar Series</u></a> | NWO & NOVA (Jul 2026)</font></li>
+                  <li><font style="font-family: Trebuchet MS; font-size: 14px; color:#6c757d;">National Astronomy Conference (NAC) | RNAS (May 2026)</font></li>
+                </ul>
+                <!--
+                <h6 style="text-align: left;">Colloquia / Seminars</h6>
+                <ul>
+                  <li><font style="font-family: Trebuchet MS; font-size: 14px; color:#6c757d;">Colloquium | University of Edinburgh (Mar 2025)</font></li>
+                </ul>
+                -->
+              </div><!--Assistant Professor-->
+
+            </div><!--Brief-CV / Grant-->
             </div><!-- /.row -->
           </div><!-- /#resume -->
 

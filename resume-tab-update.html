@@ -1,0 +1,387 @@
+<!-- ============================================================
+     DROP-IN REPLACEMENT
+     Find this in your HTML:
+       <div class="tab-pane fade" id="resume" role="tabpanel" aria-labelledby="resume-tab">
+     Replace the entire block (closing </div> included) with the code below.
+     Also paste the <style> block into your CSS file (or inside a <style> tag in <head>).
+     ============================================================ -->
+
+<!-- ── STYLES (add to your CSS file or inside <style> in <head>) ── -->
+<style>
+.tl-interactive-wrap {
+  display: flex;
+  gap: 0;
+  min-height: 480px;
+  padding: 2rem 0 1rem;
+}
+
+/* ── Left column: clickable timeline ── */
+.tl-left {
+  width: 230px;
+  flex-shrink: 0;
+  position: relative;
+  padding-top: 8px;
+}
+
+.tl-spine {
+  position: absolute;
+  left: 29px;
+  top: 20px;
+  bottom: 20px;
+  width: 2px;
+  background: rgba(255,255,255,0.12);
+}
+
+.tl-item {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 10px 10px 10px 0;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background 0.15s;
+  margin-bottom: 4px;
+  text-decoration: none;
+}
+
+.tl-item:hover {
+  background: rgba(255,255,255,0.06);
+}
+
+.tl-item.tl-active {
+  background: rgba(255,255,255,0.08);
+}
+
+.tl-dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  border: 2px solid rgba(255,255,255,0.25);
+  background: transparent;
+  flex-shrink: 0;
+  margin-top: 4px;
+  margin-left: 23px;
+  transition: border-color 0.2s, background 0.2s;
+  position: relative;
+  z-index: 1;
+}
+
+.tl-item.tl-active .tl-dot,
+.tl-item:hover .tl-dot {
+  border-color: #1D9E75;
+  background: #1D9E75;
+}
+
+.tl-label { flex: 1; }
+
+.tl-role {
+  font-size: 13px;
+  font-weight: 600;
+  color: #ffffff;
+  line-height: 1.3;
+}
+
+.tl-place {
+  font-size: 11px;
+  color: rgba(255,255,255,0.5);
+  margin-top: 2px;
+}
+
+.tl-year {
+  font-size: 10px;
+  color: rgba(255,255,255,0.3);
+  margin-top: 2px;
+}
+
+/* ── Right column: detail panel ── */
+.tl-right {
+  flex: 1;
+  padding-left: 2rem;
+  border-left: 1px solid rgba(255,255,255,0.1);
+}
+
+.tl-detail {
+  opacity: 0;
+  transform: translateX(8px);
+  transition: opacity 0.22s ease, transform 0.22s ease;
+  display: none;
+}
+
+.tl-detail.tl-visible {
+  opacity: 1;
+  transform: translateX(0);
+  display: block;
+}
+
+.tl-badge {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 3px 11px;
+  border-radius: 20px;
+  margin-bottom: 14px;
+  letter-spacing: 0.02em;
+}
+
+.tl-badge-green  { background: rgba(29,158,117,0.2); color: #5DCAA5; }
+.tl-badge-blue   { background: rgba(55,138,221,0.2); color: #85B7EB; }
+.tl-badge-amber  { background: rgba(186,117,23,0.2); color: #FAC775; }
+
+.tl-detail-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0 0 4px;
+}
+
+.tl-detail-sub {
+  font-size: 13px;
+  color: rgba(255,255,255,0.5);
+  margin: 0 0 16px;
+}
+
+.tl-detail-body {
+  font-size: 14px;
+  color: rgba(255,255,255,0.65);
+  line-height: 1.75;
+  margin-bottom: 16px;
+}
+
+.tl-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 18px;
+}
+
+.tl-tag {
+  font-size: 11px;
+  padding: 3px 9px;
+  border-radius: 20px;
+  background: rgba(255,255,255,0.06);
+  color: rgba(255,255,255,0.5);
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+.tl-highlights {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.tl-highlights li {
+  font-size: 13px;
+  color: rgba(255,255,255,0.6);
+  padding: 6px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.07);
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.tl-highlights li:last-child {
+  border-bottom: none;
+}
+
+.tl-hi-dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  margin-top: 6px;
+}
+
+.tl-empty {
+  padding-top: 2.5rem;
+  font-size: 14px;
+  color: rgba(255,255,255,0.25);
+  font-style: italic;
+}
+
+/* ── Responsive: stack on small screens ── */
+@media (max-width: 767px) {
+  .tl-interactive-wrap { flex-direction: column; }
+  .tl-left { width: 100%; }
+  .tl-right { padding-left: 0; padding-top: 1.5rem; border-left: none; border-top: 1px solid rgba(255,255,255,0.1); }
+  .tl-spine { display: none; }
+}
+</style>
+
+
+<!-- ── TAB PANE (replaces your existing #resume tab-pane) ── -->
+<div class="tab-pane fade" id="resume" role="tabpanel" aria-labelledby="resume-tab">
+  <div class="tl-interactive-wrap">
+
+    <!-- ── Left: timeline items ── -->
+    <div class="tl-left">
+      <div class="tl-spine"></div>
+
+      <div class="tl-item" data-stage="phd" onclick="tlSelect(this)">
+        <div class="tl-dot"></div>
+        <div class="tl-label">
+          <div class="tl-role">PhD</div>
+          <div class="tl-place">University of Nottingham</div>
+          <div class="tl-year">2017 – 2020</div>
+        </div>
+      </div>
+
+      <div class="tl-item" data-stage="postdoc" onclick="tlSelect(this)">
+        <div class="tl-dot"></div>
+        <div class="tl-label">
+          <div class="tl-role">Postdoctoral Researcher</div>
+          <div class="tl-place">Durham University</div>
+          <div class="tl-year">2020 – 2025</div>
+        </div>
+      </div>
+
+      <div class="tl-item" data-stage="editorial" onclick="tlSelect(this)">
+        <div class="tl-dot"></div>
+        <div class="tl-label">
+          <div class="tl-role">Editorial Board</div>
+          <div class="tl-place">ASCOM, Elsevier</div>
+          <div class="tl-year">2024 – Present</div>
+        </div>
+      </div>
+
+      <div class="tl-item" data-stage="prof" onclick="tlSelect(this)">
+        <div class="tl-dot"></div>
+        <div class="tl-label">
+          <div class="tl-role">Assistant Professor</div>
+          <div class="tl-place">Kapteyn Institute, Groningen</div>
+          <div class="tl-year">2025 – Present</div>
+        </div>
+      </div>
+    </div><!-- /.tl-left -->
+
+    <!-- ── Right: detail panels ── -->
+    <div class="tl-right">
+
+      <div id="tl-stage-phd" class="tl-detail">
+        <span class="tl-badge tl-badge-green">2017 – 2020 · United Kingdom</span>
+        <h3 class="tl-detail-title">PhD in Astrophysics</h3>
+        <p class="tl-detail-sub">University of Nottingham, United Kingdom</p>
+        <p class="tl-detail-body">
+          Completed doctoral research on galaxy morphology and machine learning–based
+          classification, developing deep learning pipelines applied to large-scale
+          photometric survey data.
+        </p>
+        <div class="tl-tags">
+          <span class="tl-tag">Galaxy morphology</span>
+          <span class="tl-tag">Deep learning</span>
+          <span class="tl-tag">CNN classification</span>
+          <span class="tl-tag">SDSS / HST</span>
+        </div>
+        <ul class="tl-highlights">
+          <li><span class="tl-hi-dot" style="background:#5DCAA5"></span>Thesis focused on ML approaches to galaxy structural analysis</li>
+          <li><span class="tl-hi-dot" style="background:#5DCAA5"></span>Built CNN pipelines for automated galaxy image classification</li>
+          <li><span class="tl-hi-dot" style="background:#5DCAA5"></span>Applied methods to SDSS and HST imaging datasets</li>
+        </ul>
+      </div>
+
+      <div id="tl-stage-postdoc" class="tl-detail">
+        <span class="tl-badge tl-badge-blue">2020 – 2025 · United Kingdom</span>
+        <h3 class="tl-detail-title">Postdoctoral Researcher</h3>
+        <p class="tl-detail-sub">Durham University, United Kingdom</p>
+        <p class="tl-detail-body">
+          Expanded research into galaxy formation and evolution across cosmic time,
+          focusing on metal-poor environments and structural transformation mechanisms
+          using multi-wavelength survey data.
+        </p>
+        <div class="tl-tags">
+          <span class="tl-tag">Galaxy evolution</span>
+          <span class="tl-tag">Metal-poor galaxies</span>
+          <span class="tl-tag">Spectral analysis</span>
+          <span class="tl-tag">ML / AI</span>
+          <span class="tl-tag">JWST</span>
+        </div>
+        <ul class="tl-highlights">
+          <li><span class="tl-hi-dot" style="background:#85B7EB"></span>Investigated galaxy quenching and morphological transformation</li>
+          <li><span class="tl-hi-dot" style="background:#85B7EB"></span>Developed interpretable AI tools for spectral and image analysis</li>
+          <li><span class="tl-hi-dot" style="background:#85B7EB"></span>Collaborated on large-scale programmes (DESI, Euclid)</li>
+        </ul>
+      </div>
+
+      <div id="tl-stage-editorial" class="tl-detail">
+        <span class="tl-badge tl-badge-amber">2024 – Present</span>
+        <h3 class="tl-detail-title">Editorial Board Member</h3>
+        <p class="tl-detail-sub">Astronomy &amp; Computing (ASCOM), Elsevier</p>
+        <p class="tl-detail-body">
+          Serving on the editorial board of <em>Astronomy and Computing</em>, an Elsevier
+          journal at the intersection of astronomical research and computational methods —
+          a natural fit with interdisciplinary work in ML and astrophysics.
+        </p>
+        <div class="tl-tags">
+          <span class="tl-tag">Peer review</span>
+          <span class="tl-tag">Astro-computing</span>
+          <span class="tl-tag">Elsevier</span>
+          <span class="tl-tag">Journal service</span>
+        </div>
+        <ul class="tl-highlights">
+          <li><span class="tl-hi-dot" style="background:#FAC775"></span>Reviewing manuscripts at the ML–astronomy interface</li>
+          <li><span class="tl-hi-dot" style="background:#FAC775"></span>Contributing to editorial direction on AI-driven methods papers</li>
+        </ul>
+      </div>
+
+      <div id="tl-stage-prof" class="tl-detail">
+        <span class="tl-badge tl-badge-green">2025 – Present · Netherlands</span>
+        <h3 class="tl-detail-title">Assistant Professor</h3>
+        <p class="tl-detail-sub">Kapteyn Astronomical Institute, University of Groningen</p>
+        <p class="tl-detail-body">
+          Leading an independent research group at one of the world's leading astronomical
+          institutes, building the Astronomy × AI Lab focused on applying state-of-the-art
+          machine learning to galaxy formation and evolution.
+        </p>
+        <div class="tl-tags">
+          <span class="tl-tag">Group leader</span>
+          <span class="tl-tag">Galaxy formation</span>
+          <span class="tl-tag">AI / ML lab</span>
+          <span class="tl-tag">Teaching</span>
+          <span class="tl-tag">Groningen</span>
+        </div>
+        <ul class="tl-highlights">
+          <li><span class="tl-hi-dot" style="background:#5DCAA5"></span>Founded the Astronomy × AI research group at Kapteyn</li>
+          <li><span class="tl-hi-dot" style="background:#5DCAA5"></span>Supervising PhD students and postdoctoral researchers</li>
+          <li><span class="tl-hi-dot" style="background:#5DCAA5"></span>Teaching and outreach at University of Groningen</li>
+          <li><span class="tl-hi-dot" style="background:#5DCAA5"></span>Open to PhD / postdoc / MSc applicants — <a href="mailto:t.cheng@rug.nl" style="color:#5DCAA5;">get in touch</a></li>
+        </ul>
+      </div>
+
+      <p class="tl-empty" id="tl-empty-hint">← Select a career stage to learn more</p>
+
+    </div><!-- /.tl-right -->
+  </div><!-- /.tl-interactive-wrap -->
+</div><!-- /#resume tab-pane -->
+
+
+<!-- ── SCRIPT (add before </body> or in your app.js) ── -->
+<script>
+function tlSelect(el) {
+  // Deactivate all items
+  document.querySelectorAll('.tl-item').forEach(function(i) {
+    i.classList.remove('tl-active');
+  });
+  // Activate clicked item
+  el.classList.add('tl-active');
+
+  // Hide empty hint
+  var hint = document.getElementById('tl-empty-hint');
+  if (hint) hint.style.display = 'none';
+
+  // Hide all detail panels
+  document.querySelectorAll('.tl-detail').forEach(function(c) {
+    c.classList.remove('tl-visible');
+    c.style.display = 'none';
+  });
+
+  // Show the matching panel
+  var stage = el.getAttribute('data-stage');
+  var card = document.getElementById('tl-stage-' + stage);
+  if (card) {
+    card.style.display = 'block';
+    requestAnimationFrame(function() {
+      card.classList.add('tl-visible');
+    });
+  }
+}
+</script>
