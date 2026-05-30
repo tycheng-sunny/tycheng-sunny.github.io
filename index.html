@@ -667,9 +667,63 @@
               <i class="fa fa-comments-o h1 text-muted"></i>
             </div>
             <div class="h3 font-weight-bold">Science Communication</div>
-            <p class="text-muted mx-auto mb-0 mt-4 para-desc">Working in Progress!</p>
           </div>
         </div>
+      </div>
+
+      <div class="row mt-4">
+
+        <div class="col-lg-6">
+          <div class="d-flex gap-3 mb-4 justify-content-end">
+            <button class="outreach-btn active" onclick="showOutreach('project', this)">Community Engagement</button>
+            <button class="outreach-btn" onclick="showOutreach('talk', this)">Public Talk</button>
+          </div>
+
+          <div id="outreach-project" class="outreach-panel">
+            <h5>Community Engagement / Project</h5>
+            <ul>
+              <li><span style="color:#6c757d;"><font style="font-family: Trebuchet MS; font-size: 14px;">Art Commission for Ogden Centre West | Durham University (2024-2025)</font></span></li>
+              <li><span style="color:#6c757d;"><font style="font-family: Trebuchet MS; font-size: 14px;">Planetarium Show | Durham University (2023-2025)</font></span></li>
+              <li><span style="color:#6c757d;"><font style="font-family: Trebuchet MS; font-size: 14px;"><a href="https://www.dur.ac.uk/celebrate-science/" style="color:#6c757d;"><u>Science Festival</u></a> | Durham University (2023-2025)</font></span></li>
+              <li><span style="color:#6c757d;"><font style="font-family: Trebuchet MS; font-size: 14px;">Durham Astronomy Girl’s Day | Durham University (2023-2025)</font></span></li>
+              <li><span style="color:#6c757d;"><font style="font-family: Trebuchet MS; font-size: 14px;">Eyes to the Sky Project | Ogden Centre & County Durham (2022-2023)</font></span></li>
+              <li><span style="color:#6c757d;"><font style="font-family: Trebuchet MS; font-size: 14px;"><a href="https://www.youtube.com/watch?v=TRfCUF1HoFc&t=166s" style="color:#6c757d;"><u>Digital Art & Astronomy Project, Ogden@20</u></a> | Ogden Centre & Durham University (2022)</font></span></li>
+            </ul>
+
+          </div>
+
+          <div id="outreach-talk" class="outreach-panel" style="display:none;">
+            <h5>Public Talk / Lecture</h5>
+            <ul>
+              <li><span style="color:#6c757d;"><font style="font-family: Trebuchet MS; font-size: 14px;">Programming for High Schooler | University of Groningen (2025-Present)</font></span></li>
+              <li><span style="color:#6c757d;"><font style="font-family: Trebuchet MS; font-size: 14px;">HM Prison Durham (Jun 2025)</font></span></li>
+              <li><span style="color:#6c757d;"><font style="font-family: Trebuchet MS; font-size: 14px;">Cleveland & Darlington Astronomical Society (Apr 2025)</font></span></li>
+              <li><span style="color:#6c757d;"><font style="font-family: Trebuchet MS; font-size: 14px;">Sunderland Astronomical Society (Oct 2024)</font></span></li>
+              <li><span style="color:#6c757d;"><font style="font-family: Trebuchet MS; font-size: 14px;">Newcastle Astronomical Society (Sep 2023)</font></span></li>
+              <li><span style="color:#6c757d;"><font style="font-family: Trebuchet MS; font-size: 14px;">IOP Girl Guiding Group, Sunderland (Sep 2023)</font></span></li>
+              <li><span style="color:#6c757d;"><font style="font-family: Trebuchet MS; font-size: 14px;">Sunderland Astronomical Society (Jul 2023)</font></span></li>
+              <li><span style="color:#6c757d;"><font style="font-family: Trebuchet MS; font-size: 14px;">Space Night, Woodham Academy, Durham (Nov 2022)</font></span></li>
+              <li><span style="color:#6c757d;"><font style="font-family: Trebuchet MS; font-size: 14px;">Seasonal Talks | CUNY Baruch College Forum (2022-2023)</font></span></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-lg-6">
+          <div class="outreach-gallery">
+            <div class="gallery-track">
+              <img class="gallery-slide active" src="images/outreach1.jpg" alt="Universe Creator Arcade">
+              <img class="gallery-slide" src="images/outreach2.jpg" alt="Galaxy Maker Poster">
+              <img class="gallery-slide" src="images/outreach3.jpg" alt="Observatory Talk">
+              <img class="gallery-slide" src="images/outreach4.jpg" alt="Planetarium">
+              <img class="gallery-slide" src="images/outreach5.jpg" alt="Celebrate Science in Durham">
+              <img class="gallery-slide" src="images/outreach6.jpg" alt="Outreach Setup">
+            </div>
+            <button class="gallery-arrow left" onclick="moveGallery(-1)">&#8249;</button>
+            <button class="gallery-arrow right" onclick="moveGallery(1)">&#8250;</button>
+            <div class="gallery-dots" id="gallery-dots"></div>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
