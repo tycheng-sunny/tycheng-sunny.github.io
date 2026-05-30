@@ -2368,8 +2368,30 @@ a.close.disabled { pointer-events: none; }
 .timeline-box:nth-child(2n+1)::after { right: -15%; }
 .timeline-box:nth-child(2n)::after   { left: -9%; }
 
-.timeline-box.clickable { cursor: pointer; }
-.timeline-box.clickable:hover { outline: 2px dashed DarkGoldenrod; }
+.timeline-box.clickable {
+  cursor: pointer;
+  transition: all 0.2s;
+  position: relative;
+  overflow: hidden;
+}
+
+.timeline-box.clickable::before {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #185FA5;
+  opacity: 0.15;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: transform 0.4s ease;
+}
+
+.timeline-box.clickable:hover::before {
+  transform: translate(-50%, -50%) scale(12);
+}
 
 .timeline-container { padding: 8px; }
 
