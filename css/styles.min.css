@@ -2813,12 +2813,12 @@ a.close.disabled { pointer-events: none; }
   content: "";
   border-radius: inherit;
   opacity: 0;
-  animation: codespacesTimeDot 2s linear forwards;
+  animation: codespacesTimeDot 5s linear forwards;
 }
 
 .codespaces-develop-time-1:before { background-color: #f0c49a; animation-delay: 1s; }
-.codespaces-develop-time-2:before { background-color: #ff798b; animation-delay: 3s; }
-.codespaces-develop-time-3:before { background-color: #945a8b; animation-delay: 5s; }
+.codespaces-develop-time-2:before { background-color: #ff798b; animation-delay: 6s; }
+.codespaces-develop-time-3:before { background-color: #945a8b; animation-delay: 11s; }
 
 .codespaces-moon { left: 125px; width: 50px; height: 50px; }
 
@@ -2858,15 +2858,190 @@ a.close.disabled { pointer-events: none; }
 .section-codespaces-develop-night .codespaces-develop-text      { color: hsla(0, 0%, 100%, 0.8) !important; }
 .section-codespaces-develop-night .codespaces-develop-cloud     { opacity: 0.07; transform: translateX(-100px); }
 .section-codespaces-develop-night .codespaces-develop-time      { background-color: hsla(0, 0%, 100%, 0.1); }
-.section-codespaces-develop-night .codespaces-develop-time:before { animation: codespacesTimeDot2 2s linear forwards; }
-.section-codespaces-develop-night .codespaces-develop-time-1:before { animation-delay: 5s; }
-.section-codespaces-develop-night .codespaces-develop-time-2:before { animation-delay: 3s; }
+.section-codespaces-develop-night .codespaces-develop-time:before { animation: codespacesTimeDot2 5s linear forwards; }
+.section-codespaces-develop-night .codespaces-develop-time-1:before { animation-delay: 11s; }
+.section-codespaces-develop-night .codespaces-develop-time-2:before { animation-delay: 6s; }
 .section-codespaces-develop-night .codespaces-develop-time-3:before { animation-delay: 1s; }
 .section-codespaces-develop-night .codespaces-sun               { box-shadow: none; transform: rotate(180deg); }
 .section-codespaces-develop-night .codespaces-sun-stream:before { transform: translate(10px, 10px) scale(0.5); }
 .section-codespaces-develop-night .codespaces-develop-device-1  { opacity: 0; transition-delay: 0s; transform: translateX(-50px); }
 .section-codespaces-develop-night .codespaces-develop-device-2  { opacity: 1; transform: translateX(0); }
 
+/* ============================================================
+   32b. Lab Members Tabs
+   ============================================================ */
+
+.lab-tab-bar {
+  display: flex;
+  gap: 8px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+  justify-content: center;
+}
+
+.lab-tab-btn {
+  background: none;
+  border: none;
+  border-bottom: 2px solid transparent;
+  padding: 10px 20px;
+  font-size: 14px;
+  color: #888;
+  cursor: pointer;
+  margin-bottom: -1px;
+  transition: color 0.15s;
+}
+
+.lab-tab-btn:hover { color: #333; }
+
+.lab-tab-btn.active {
+  color: #333;
+  font-weight: 600;
+  border-bottom: 2px solid #ff9800;
+}
+
+.section-codespaces-develop-night .lab-tab-btn {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.section-codespaces-develop-night .lab-tab-btn:hover {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.section-codespaces-develop-night .lab-tab-btn.active {
+  color: #fff;
+  border-bottom-color: #ff9800;
+}
+
+.section-codespaces-develop-night .txt-bg-training:before {
+  color: #fff;
+  opacity: 0.12;
+}
+
+/* Member cards */
+.section-codespaces-develop-night .lab-member-card {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.section-codespaces-develop-night .lab-member-name {
+  color: #fff;
+}
+
+.section-codespaces-develop-night .lab-member-role,
+.section-codespaces-develop-night .lab-member-project {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.section-codespaces-develop-night .lab-member-links a {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.section-codespaces-develop-night .lab-member-links a:hover {
+  color: #ff9800;
+}
+
+/* Past members */
+.section-codespaces-develop-night .lab-past-list li {
+  border-bottom-color: rgba(255, 255, 255, 0.1);
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.section-codespaces-develop-night .lab-past-tag {
+  background: rgba(255, 255, 255, 0.08);
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.section-codespaces-develop-night .lab-past-name {
+  color: #fff !important;
+}
+
+/* Join information */
+.section-codespaces-develop-night .lab-prose {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.section-codespaces-develop-night .lab-prose strong {
+  color: #fff;
+}
+
+.section-codespaces-develop-night .lab-prose a {
+  color: #ff9800;
+}
+
+.section-codespaces-develop-night .para-desc {
+  color: rgba(255, 255, 255, 0.5) !important;
+}
+
+.lab-tab-btn:focus { outline: none; }
+
+.lab-tab-panel { display: none; }
+.lab-tab-panel.active { display: block; }
+
+.lab-member-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 20px;
+}
+
+.lab-member-card {
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 12px;
+  padding: 1.5rem 1rem;
+  text-align: center;
+}
+
+.lab-avatar {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 20px;
+  margin: 0 auto 12px;
+  overflow: hidden;
+}
+
+.lab-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.lab-member-name  { font-size: 14px; font-weight: 600; color: #222; margin: 0 0 4px; }
+.lab-member-role  { font-size: 12px; color: #888; margin: 0 0 6px; }
+.lab-member-project { font-size: 12px; color: #666; margin: 0 0 10px; line-height: 1.5; }
+
+.lab-member-links { display: flex; justify-content: center; gap: 12px; }
+.lab-member-links a { color: #aaa; font-size: 18px; text-decoration: none; transition: color 0.15s; }
+.lab-member-links a:hover { color: #ff9800; }
+
+.lab-past-list { list-style: none; padding: 0; margin: 0 0 1.5rem; }
+.lab-past-list li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.07);
+  font-size: 14px;
+}
+.lab-past-list li:last-child { border-bottom: none; }
+
+.lab-past-tag {
+  font-size: 11px;
+  background: #f4f4f4;
+  color: #777;
+  border-radius: 6px;
+  padding: 3px 10px;
+  white-space: nowrap;
+}
+
+.lab-prose { font-size: 15px; color: #666; line-height: 1.8; max-width: 640px; }
+.lab-prose p { margin: 0 0 1.25rem; }
+.lab-prose strong { color: #333; font-weight: 600; display: block; margin-bottom: 2px; }
 
 /* ============================================================
    33. Notifications
