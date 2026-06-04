@@ -3043,6 +3043,82 @@ a.close.disabled { pointer-events: none; }
 .lab-prose p { margin: 0 0 1.25rem; }
 .lab-prose strong { color: #333; font-weight: 600; display: block; margin-bottom: 2px; }
 
+/* Join — two column layout */
+.join-layout {
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+}
+
+.join-nav {
+  flex: 0 0 200px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.join-nav-btn {
+  background: none;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  border-radius: 6px;
+  padding: 10px 14px;
+  font-size: 13px;
+  color: #666;
+  text-align: left;
+  cursor: pointer;
+  transition: all 0.15s;
+  outline: none;
+}
+
+.join-nav-btn:focus { outline: none; }
+
+.join-nav-btn:hover {
+  background: rgba(0, 0, 0, 0.04);
+  color: #333;
+}
+
+.join-nav-btn.active {
+  background: #ff9800;
+  border-color: #ff9800;
+  color: #fff;
+  font-weight: 600;
+}
+
+.join-content { flex: 1; }
+
+.join-panel { display: none; }
+.join-panel p {
+  text-align: justify;
+}
+.join-panel.active { display: block; }
+
+/* Join — night mode */
+.section-codespaces-develop-night .join-nav-btn {
+  border-color: rgba(255, 255, 255, 0.15);
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.section-codespaces-develop-night .join-nav-btn:hover {
+  background: rgba(255, 255, 255, 0.08);
+  color: #fff;
+}
+
+.section-codespaces-develop-night .join-nav-btn.active {
+  background: #ff9800;
+  border-color: #ff9800;
+  color: #fff;
+}
+
+.section-codespaces-develop-night .join-panel h5 {
+  color: #fff;
+}
+
+/* Join — responsive */
+@media (max-width: 767px) {
+  .join-layout { flex-direction: column; }
+  .join-nav { flex: none; flex-direction: row; flex-wrap: wrap; }
+}
+
 /* ============================================================
    33. Notifications
    ============================================================ */
